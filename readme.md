@@ -8,8 +8,8 @@ El sitio implementa una arquitectura web semántica, modular y totalmente respon
 
 ## 🌐 Enlaces del Proyecto
 
-- **Repositorio GitHub:** [https://github.com/TU-USUARIO/TU-REPOSITORIO](https://github.com/TU-USUARIO/TU-REPOSITORIO)
-- **Sitio Desplegado (GitHub Pages):** [https://TU-USUARIO.github.io/TU-REPOSITORIO/](https://TU-USUARIO.github.io/TU-REPOSITORIO/)
+- **Repositorio GitHub:** [https://github.com/andreaendigital/frontend01](https://github.com/andreaendigital/frontend01)
+- **Sitio Desplegado (GitHub Pages):** [https://andreaendigital.github.io/frontend01/sem03/index](https://andreaendigital.github.io/frontend01/sem03/index)
 
 ---
 
