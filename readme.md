@@ -2,7 +2,7 @@
 
 Proyecto web frontend desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)** de Duoc UC. Corresponde a la entrega de la **Experiencia de Aprendizaje 1: Aplicando los fundamentos de la web con HTML5 y CSS3** (Actividad Sumativa Semana 3).
 
-El sitio implementa una arquitectura web semántica, modular y totalmente responsiva, aplicando conceptos de **CSS Grid**, **Flexbox**, **Modelo de Cajas**, **Variables CSS (`:root`)** y efectos de interfaz modernos estilo *cyberpunk/tech* (Glassmorphism y componentes volumétricos 3D).
+El sitio implementa una arquitectura web semántica, modular y totalmente responsiva, aplicando conceptos de **CSS Grid**, **Flexbox**, **Modelo de Cajas**, **Variables CSS (`:root`)** y efectos de interfaz modernos  (Glassmorphism y componentes volumétricos 3D).
 
 ---
 
@@ -18,7 +18,7 @@ El sitio implementa una arquitectura web semántica, modular y totalmente respon
 Demostración visual de la interfaz adaptada a diferentes resoluciones de pantalla utilizando Chrome DevTools:
 
 ### 🖥️ 1. Vista de Escritorio (Desktop - 1200px+)
-Visualización del catálogo completo en cuadrícula bidimensional de 3 columnas mediante CSS Grid y barra de navegación horizontal expandida.
+Visualización del catálogo completo en cuadrícula bidimensional de 3 columnas mediante CSS Grid y barra de navegación horizontal expandida. A partir de ~868px (Desktop): el contenedor pasa automáticamente a 3 columnas.
 
 ![Vista de Escritorio](/sem03/img/pc01.png)
 
@@ -27,7 +27,7 @@ Visualización del catálogo completo en cuadrícula bidimensional de 3 columnas
 ---
 
 ### 📱 2. Vista de Tablet (Tablet / Pantalla Mediana - 768px)
-Reorganización fluida de las tarjetas en 2 columnas mediante la función `repeat(auto-fit, minmax(260px, 1fr))` y contención de márgenes.
+A partir de ~576px hasta ~868px (Tablets y móviles apaisados): El navegador calcula espacio para dos elementos y cambia de forma fluida a 2 columnas de igual tamaño (1fr cada una).
 
 ![Vista de Tablet](/sem03/img/tablet01.png)
 
@@ -68,15 +68,3 @@ Colapso del catálogo a 1 sola columna, ajuste vertical de los enlaces del menú
   - **Media Queries:** Breakpoint de control en `@media (max-width: 600px)`.
 
 ---
-
-## 📁 Estructura del Repositorio
-
-```text
-├── index.html              # Documento principal con estructura HTML5 semántica
-├── README.md               # Documentación y capturas del proyecto
-├── css/
-│   └── styles.css          # Hoja de estilos externa con Grid, Flexbox y Variables
-└── img/            # Evidencias gráficas de responsividad
-    ├── movil01.jpeg
-    ├── tablet01.jpeg
-    └── pc01.jpeg
