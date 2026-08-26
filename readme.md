@@ -20,20 +20,20 @@ Demostración visual de la interfaz adaptada a diferentes resoluciones de pantal
 ### 🖥️ 1. Vista de Escritorio (Desktop - 1200px+)
 Visualización del catálogo completo en cuadrícula bidimensional de 3 columnas mediante CSS Grid y barra de navegación horizontal expandida.
 
-![Vista de Escritorio](img/pc01.png)
+![Vista de Escritorio](/sem03/img/pc01.png)
 
-![Vista de Escritorio](img/pc02.png)
+![Vista de Escritorio](/sem03/img/pc02.png)
 
 ---
 
 ### 📱 2. Vista de Tablet (Tablet / Pantalla Mediana - 768px)
 Reorganización fluida de las tarjetas en 2 columnas mediante la función `repeat(auto-fit, minmax(260px, 1fr))` y contención de márgenes.
 
-![Vista de Tablet](img/tablet01.png)
+![Vista de Tablet](/sem03/img/tablet01.png)
 
-![Vista de Tablet](img/tablet02.png)
+![Vista de Tablet](/sem03/img/tablet02.png)
 
-![Vista de Tablet](img/tablet03.png)
+![Vista de Tablet](/sem03/img/tablet03.png)
 
 
 ---
@@ -41,11 +41,11 @@ Reorganización fluida de las tarjetas en 2 columnas mediante la función `repea
 ### 📲 3. Vista Móvil (Mobile - 375px / 600px o menos)
 Colapso del catálogo a 1 sola columna, ajuste vertical de los enlaces del menú (`flex-direction: column`) y optimización del formulario de contacto táctil mediante Media Queries.
 
-![Vista Móvil](img/movil01.jpeg)
+![Vista Móvil](/sem03/img/movil01.jpeg)
 
-![Vista Móvil](img/movil02.jpeg)
+![Vista Móvil](/sem03/img/movil02.jpeg)
 
-![Vista Móvil](img/movil03.jpeg)
+![Vista Móvil](/sem03/img/movil03.jpeg)
 
 ---
 
