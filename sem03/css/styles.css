@@ -1,0 +1,374 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES (Custom Properties)
+   ========================================================================== */
+:root {
+    /* Fondos y capas de profundidad */
+    --bg-gradient-top: #0a0e17;       /* Azul petróleo oscuro */
+    --bg-gradient-mid: #1b1035;       /* Morado oscuro profundo */
+    --bg-gradient-bottom: #08070d;    /* Negro base */
+    
+    /* Paleta cromática principal */
+    --color-primary: #120d24;         /* Base oscura para header/footer */
+    --color-nav-bg: #0b0718;          /* Lila-negro profundo para navegación */
+    --color-accent: #3b82f6;          /* Azul gamer para bordes/detalles */
+    --color-accent-tech: #9d4edd;     /* Lila brillante para interacción */
+    --color-accent-hover: #7b2cbf;    /* Lila oscuro para hover */
+    
+    /* Superficies y componentes */
+    --color-surface-card: #16192b;    /* Fondo sólido de tarjetas y formularios */
+    --color-surface-input: #0d111a;   /* Fondo de campos de entrada */
+    --color-border: #2e344e;          /* Borde sutil */
+    
+    /* Tipografía y textos */
+    --color-text: #f3f4f6;            /* Texto principal de alto contraste */
+    --color-text-muted: #9ca3af;      /* Texto secundario/descripciones */
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Trebuchet MS', 'Arial Black', sans-serif;
+}
+
+/* ==========================================================================
+   2. RESET Y MODELO DE CAJAS
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* Capa 1: Sombra superior bajo el navbar. Capa 2: Degradado diagonal */
+    background: 
+        linear-gradient(
+            to bottom, 
+            rgba(0, 0, 0, 0.85) 0%, 
+            rgba(0, 0, 0, 0.4) 80px, 
+            transparent 220px
+        ),
+        linear-gradient(
+            135deg, 
+            var(--bg-gradient-top) 0%, 
+            var(--bg-gradient-mid) 50%, 
+            var(--bg-gradient-bottom) 100%
+        );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ==========================================================================
+   3. HEADER Y NAVEGACIÓN (Flexbox)
+   ========================================================================== */
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 3px solid var(--color-accent-tech);
+}
+
+.header-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+}
+
+.header-subtitle {
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.navbar {
+    background-color: var(--color-nav-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    background-color: var(--color-accent-tech);
+    color: #ffffff;
+    outline: none;
+}
+
+/* ==========================================================================
+   4. LAYOUT PRINCIPAL Y GRID DE PRODUCTOS (CSS Grid)
+   ========================================================================== */
+.main-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+    font-family: var(--font-heading);
+}
+
+.product-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.product-card {
+    background-color: var(--color-surface-card);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent-tech);
+    box-shadow: 0 12px 24px rgba(157, 78, 221, 0.2);
+}
+
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border);
+}
+
+.product-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+}
+
+.product-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+/* Etiquetas de Estado con Pseudo-clases y Clases Semánticas */
+.product-tag {
+    align-self: flex-start;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 9999px;
+    text-transform: uppercase;
+}
+
+.product-tag.tag-new,
+.product-card:nth-child(1) .product-tag,
+.product-card:nth-child(5) .product-tag {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.product-tag.tag-popular,
+.product-card:nth-child(2) .product-tag,
+.product-card:nth-child(6) .product-tag {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.product-tag.tag-sale,
+.product-card:nth-child(3) .product-tag,
+.product-card:nth-child(4) .product-tag {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* ==========================================================================
+   5. FORMULARIO DE CONTACTO (Flexbox)
+   ========================================================================== */
+.contact-section {
+    background-color: var(--color-surface-card);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-surface-input);
+    color: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-tech);
+    box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.25);
+}
+
+/* ==========================================================================
+   BOTÓN VOLUMÉTRICO CRISTALINO (Glassmorphism + 3D Tech)
+   ========================================================================== */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    cursor: pointer;
+    background: linear-gradient(
+        135deg, 
+        rgba(157, 78, 221, 0.45) 0%, 
+        rgba(114, 9, 183, 0.25) 100%
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 10px;
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+        0 5px 0 #5a189a,
+        0 10px 20px rgba(157, 78, 221, 0.35);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    top: 0;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(
+        135deg, 
+        rgba(157, 78, 221, 0.65) 0%, 
+        rgba(114, 9, 183, 0.45) 100%
+    );
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+        0 6px 0 #5a189a,
+        0 14px 28px rgba(157, 78, 221, 0.5);
+    top: -2px;
+}
+
+.btn-submit:active {
+    top: 4px;
+    box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.5),
+        0 1px 0 #5a189a,
+        0 4px 10px rgba(157, 78, 221, 0.3);
+}
+
+.btn-submit:focus-visible {
+    outline: none;
+    box-shadow: 
+        0 0 0 3px rgba(255, 255, 255, 0.8),
+        0 0 0 6px var(--color-accent-tech),
+        0 5px 0 #5a189a;
+}
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.footer a {
+    color: var(--color-accent-tech);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES (Responsividad)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .header-title {
+        font-size: 1.8rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contact-section {
+        padding: 1.25rem;
+    }
+}

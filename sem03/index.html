@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Arcade - Tienda de Videojuegos</title>
+    <!-- Vinculación de la hoja de estilos externa -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Cabecera semántica -->
+    <header class="header">
+        <h1 class="header-title">Pixel Arcade</h1>
+        <p class="header-subtitle">Tu tienda definitiva para videojuegos, consolas y accesorios.</p>
+    </header>
+
+    <!-- Menú de navegación accesible -->
+    <nav class="navbar" aria-label="Navegación principal">
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor Principal estructurado -->
+    <main class="main-container">
+        
+        <!-- Catálogo de productos con CSS Grid -->
+        <!-- Sección de productos (6 ítems optimizados con CSS Grid) -->
+        <section id="productos" class="catalog-section">
+            <h2 class="section-title">Productos Destacados</h2>
+
+            <ul class="product-grid">
+                <!-- Producto 1 -->
+                <li class="product-card">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=300" alt="Control inalámbrico profesional blanco" loading="lazy">
+                    <div class="product-body">
+                        <h3 class="product-title">Gamepad Pro Wireless</h3>
+                        <p class="product-desc">Control ergonómico de alta precisión compatible con PC y consolas.</p>
+                        <span class="product-tag tag-new">Nuevo</span>
+                    </div>
+                </li>
+
+                <!-- Producto 2 -->
+                <li class="product-card">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300" alt="Auriculares gamer iluminación LED" loading="lazy">
+                    <div class="product-body">
+                        <h3 class="product-title">Auriculares Gamer 7.1</h3>
+                        <p class="product-desc">Sonido envolvente y micrófono con cancelación de ruido pasiva.</p>
+                        <span class="product-tag tag-popular">Más vendido</span>
+                    </div>
+                </li>
+
+                <!-- Producto 3 -->
+                <li class="product-card">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300" alt="Consola retro con mandos clásicos" loading="lazy">
+                    <div class="product-body">
+                        <h3 class="product-title">Consola Retro Classic</h3>
+                        <p class="product-desc">Revive más de 500 títulos clásicos con salida HDMI y mandos incluidos.</p>
+                        <span class="product-tag tag-sale">Oferta</span>
+                    </div>
+                </li>
+
+                <!-- Producto 4: Oferta de Notebooks -->
+                <li class="product-card">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Notebook gamer de alto rendimiento" loading="lazy">
+                    <div class="product-body">
+                        <h3 class="product-title">Notebook Gamer Ultra</h3>
+                        <p class="product-desc">Potencia gráfica de última generación para juegos exigentes y multitarea fluida.</p>
+                        <span class="product-tag tag-sale">Oferta</span>
+                    </div>
+                </li>
+
+                <!-- Producto 5: Mouse Ergonómico -->
+                <li class="product-card">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1727417453138-7d8efdd70fb3?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mouse ergonómico gamer inalámbrico" loading="lazy">
+                    <div class="product-body">
+                        <h3 class="product-title">Mouse Ergonómico Pro</h3>
+                        <p class="product-desc">Diseño optimizado para largas sesiones de juego, sensor óptico de alta precisión.</p>
+                        <span class="product-tag tag-new">Nuevo</span>
+                    </div>
+                </li>
+
+                <!-- Producto 6: Setup Completo -->
+                <li class="product-card">
+                    <img class="product-img" src="https://plus.unsplash.com/premium_photo-1682141878168-5dace8e1785d?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Setup gamer completo con monitor e iluminación" loading="lazy">
+                    <div class="product-body">
+                        <h3 class="product-title">Setup Battlestation Complete</h3>
+                        <p class="product-desc">Estación completa de trabajo y streaming con periféricos integrados e iluminación RGB.</p>
+                        <span class="product-tag tag-popular">Destacado</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Sección de Contacto estructurada con Flexbox -->
+        <section id="contacto" class="contact-section">
+            <h2 class="section-title">Contáctanos</h2>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Motivo de Consulta:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="soporte">Soporte Técnico</option>
+                        <option value="ventas">Consulta de Ventas</option>
+                        <option value="garantia">Garantías y Devoluciones</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p><strong>Dirección:</strong> Av. JuegosGamers 1111, Santiago, Chile</p>
+        <p>
+            Síguenos en:
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter/X</a> |
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </p>
+        <p>&copy; 2026 Pixel Arcade - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

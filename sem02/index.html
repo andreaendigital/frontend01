@@ -1,105 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixel Arcade - Tienda de Videojuegos</title>
     <!-- Vinculación de la hoja de estilos externa -->
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <!-- Cabecera del sitio -->
     <header class="header">
-        <h1 class="header-title">Pixel Arcade</h1>
-        <p class="header-subtitle">Tu tienda definitiva para videojuegos, consolas y accesorios.</p>
+      <h1 class="header-title">Pixel Arcade</h1>
+      <p class="header-subtitle">
+        Tu tienda definitiva para videojuegos, consolas y accesorios.
+      </p>
     </header>
 
     <!-- Menú de navegación -->
     <nav class="navbar">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#productos">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+      </ul>
     </nav>
 
     <!-- Contenedor Principal -->
     <main class="main-container">
-        <!-- Sección de productos -->
-        <section id="productos" class="catalog-section">
-            <h2 class="section-title">Productos Destacados</h2>
-            
-            <ul class="product-grid">
-                <!-- Producto 1 -->
-                <li class="product-card">
-                    <img class="product-img" src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=300" alt="Control inalámbrico blanco">                
-                    <h3 class="product-title">Gamepad Pro Wireless</h3>
-                    <p class="product-desc">Control ergonómico de alta precisión compatible con PC y consolas.</p>
-                    <span class="product-tag">Nuevo</span>
-                </li>
+      <!-- Sección de productos -->
+      <section id="productos" class="catalog-section">
+        <h2 class="section-title">Productos Destacados</h2>
 
-                <!-- Producto 2 -->
-                <li class="product-card">
-                    <img class="product-img" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300" alt="Auriculares gamer iluminación LED">
-                    <h3 class="product-title">Auriculares Gamer 7.1</h3>
-                    <p class="product-desc">Sonido envolvente y micrófono con cancelación de ruido pasiva.</p>
-                    <span class="product-tag">Más vendido</span>
-                </li>
+        <ul class="product-grid">
+          <!-- Producto 1 -->
+          <li class="product-card">
+            <img
+              class="product-img"
+              src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=300"
+              alt="Control inalámbrico blanco"
+            />
+            <h3 class="product-title">Gamepad Pro Wireless</h3>
+            <p class="product-desc">
+              Control ergonómico de alta precisión compatible con PC y consolas.
+            </p>
+            <span class="product-tag">Nuevo</span>
+          </li>
 
-                <!-- Producto 3 -->
-                <li class="product-card">
-                    <img class="product-img" src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300" alt="Consola retro con mandos clásicos">
-                    <h3 class="product-title">Consola Retro Classic</h3>
-                    <p class="product-desc">Revive más de 500 títulos clásicos con salida HDMI y mandos incluidos.</p>
-                    <span class="product-tag">Oferta</span>
-                </li>
-            </ul>
-        </section>
+          <!-- Producto 2 -->
+          <li class="product-card">
+            <img
+              class="product-img"
+              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=300"
+              alt="Auriculares gamer iluminación LED"
+            />
+            <h3 class="product-title">Auriculares Gamer 7.1</h3>
+            <p class="product-desc">
+              Sonido envolvente y micrófono con cancelación de ruido pasiva.
+            </p>
+            <span class="product-tag">Más vendido</span>
+          </li>
 
-        <!-- Sección de Contacto con Formulario (Semana 2) -->
-        <section id="contacto" class="contact-section">
-            <h2 class="section-title">Contáctanos</h2>
-            <form action="#" method="post" class="contact-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
-                </div>
+          <!-- Producto 3 -->
+          <li class="product-card">
+            <img
+              class="product-img"
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300"
+              alt="Consola retro con mandos clásicos"
+            />
+            <h3 class="product-title">Consola Retro Classic</h3>
+            <p class="product-desc">
+              Revive más de 500 títulos clásicos con salida HDMI y mandos
+              incluidos.
+            </p>
+            <span class="product-tag">Oferta</span>
+          </li>
+        </ul>
+      </section>
 
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
-                </div>
+      <!-- Sección de Contacto con Formulario (Semana 2) -->
+      <section id="contacto" class="contact-section">
+        <h2 class="section-title">Contáctanos</h2>
+        <form action="#" method="post" class="contact-form">
+          <div class="form-group">
+            <label for="nombre">Nombre Completo:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej. Juan Pérez"
+              required
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="categoria">Motivo de Consulta:</label>
-                    <select id="categoria" name="categoria">
-                        <option value="soporte">Soporte Técnico</option>
-                        <option value="ventas">Consulta de Ventas</option>
-                        <option value="garantia">Garantías y Devoluciones</option>
-                    </select>
-                </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nombre@correo.com"
+              required
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                </div>
+          <div class="form-group">
+            <label for="categoria">Motivo de Consulta:</label>
+            <select id="categoria" name="categoria">
+              <option value="soporte">Soporte Técnico</option>
+              <option value="ventas">Consulta de Ventas</option>
+              <option value="garantia">Garantías y Devoluciones</option>
+            </select>
+          </div>
 
-                <button type="submit" class="btn-submit">Enviar Mensaje</button>
-            </form>
-        </section>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Escribe tu mensaje aquí..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        </form>
+      </section>
     </main>
 
     <!-- Pie de página -->
     <footer class="footer">
-        <p><strong>Dirección:</strong> Av. JuegosGamers 1111, Santiago, Chile</p>
-        <p>
-            Síguenos en: 
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter/X</a> | 
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </p>
-        <p>&copy; 2026 Pixel Arcade - Todos los derechos reservados.</p>
+      <p><strong>Dirección:</strong> Av. JuegosGamers 1111, Santiago, Chile</p>
+      <p>
+        Síguenos en:
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+          >Twitter/X</a
+        >
+        |
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram</a
+        >
+      </p>
+      <p>&copy; 2026 Pixel Arcade - Todos los derechos reservados.</p>
     </footer>
-
-</body>
+  </body>
 </html>
