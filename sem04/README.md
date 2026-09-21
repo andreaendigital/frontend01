@@ -61,14 +61,14 @@ Se conservó el formulario original de contacto con campos para nombre, correo, 
 
 ## Tecnologías utilizadas
 
-| Tecnología | Uso |
-| --- | --- |
-| HTML5 | Estructura semántica y accesible |
-| CSS3 | Identidad visual, responsive y efectos glassmorphism |
-| Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y formulario |
-| JavaScript ES6+ | Inicialización explícita del carrusel |
-| Unsplash | Imágenes públicas del carrusel y catálogo |
-| GitHub Pages | Publicación estática del proyecto |
+| Tecnología      | Uso                                                  |
+| --------------- | ---------------------------------------------------- |
+| HTML5           | Estructura semántica y accesible                     |
+| CSS3            | Identidad visual, responsive y efectos glassmorphism |
+| Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y formulario  |
+| JavaScript ES6+ | Inicialización explícita del carrusel                |
+| Unsplash        | Imágenes públicas del carrusel y catálogo            |
+| GitHub Pages    | Publicación estática del proyecto                    |
 
 ## Estructura de `sem04`
 
@@ -104,10 +104,22 @@ Bootstrap y las imágenes se cargan desde CDN, por lo que se necesita conexión 
 
 ## Evidencias responsive de Semana 4
 
-Las capturas específicas de la interfaz Bootstrap de Semana 4 todavía están pendientes de incorporarse. No se reutilizan las imágenes de `sem03`, porque corresponden al avance CSS3 de esa semana.
+Las siguientes capturas corresponden directamente a la interfaz Bootstrap de Semana 4 y se encuentran dentro de `sem04/img/`.
 
-Cuando se generen las nuevas evidencias, deben guardarse dentro de `sem04/img/` y organizarse en las vistas:
+### Vista de PC
 
-- Escritorio.
-- Tablet.
-- Móvil.
+![Evidencia PC 1](img/sem04pc01.png)
+
+![Evidencia PC 2](img/sem04pc02.png)
+
+![Evidencia PC 3](img/sem04pc03.png)
+
+### Vista móvil
+
+![Evidencia móvil 1](img/sem04movil01.png)
+
+![Evidencia móvil 2](img/sem04movil02.png)
+
+![Evidencia móvil 3](img/sem04movil03.png)
+
+Actualmente la carpeta contiene tres evidencias de PC y tres evidencias móviles. La cuarta imagen móvil mencionada todavía no está presente en `sem04/img`.

@@ -19,12 +19,12 @@ Esta versión evoluciona la estructura HTML de las semanas anteriores mediante u
 
 ## Tecnologías utilizadas
 
-| Tecnología | Aplicación |
-| --- | --- |
-| HTML5 | Estructura semántica, catálogo y formulario |
-| CSS3 | Variables, Grid, Flexbox, media queries y efectos visuales |
-| Unsplash | Imágenes públicas de productos |
-| GitHub Pages | Publicación del sitio estático |
+| Tecnología   | Aplicación                                                 |
+| ------------ | ---------------------------------------------------------- |
+| HTML5        | Estructura semántica, catálogo y formulario                |
+| CSS3         | Variables, Grid, Flexbox, media queries y efectos visuales |
+| Unsplash     | Imágenes públicas de productos                             |
+| GitHub Pages | Publicación del sitio estático                             |
 
 ## Estructura de la semana
 

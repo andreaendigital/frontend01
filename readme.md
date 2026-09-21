@@ -4,12 +4,12 @@ Proyecto desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)** de 
 
 ## Resumen por semana
 
-| Semana | Enfoque | Agregados principales |
-| --- | --- | --- |
-| Semana 1 | Fundamentos HTML5 | Estructura semántica inicial, navegación, catálogo de productos, enlaces, imágenes y footer. |
-| Semana 2 | CSS3 y formularios | Hoja de estilos externa, variables CSS, layout con Grid y Flexbox, tarjetas de productos, etiquetas visuales y formulario de contacto accesible. |
-| Semana 3 | Diseño responsive | Catálogo ampliado a seis productos, mejoras de accesibilidad, media queries, adaptación móvil/tablet/escritorio, sombras, gradientes y efectos visuales. |
-| Semana 4 | Bootstrap 5.3 responsive | Navbar colapsable, carrusel automático, Grid System, seis Cards Bootstrap, formulario conservado y footer integrado con el estilo visual original. |
+| Semana   | Enfoque                  | Agregados principales                                                                                                                                    |
+| -------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Semana 1 | Fundamentos HTML5        | Estructura semántica inicial, navegación, catálogo de productos, enlaces, imágenes y footer.                                                             |
+| Semana 2 | CSS3 y formularios       | Hoja de estilos externa, variables CSS, layout con Grid y Flexbox, tarjetas de productos, etiquetas visuales y formulario de contacto accesible.         |
+| Semana 3 | Diseño responsive        | Catálogo ampliado a seis productos, mejoras de accesibilidad, media queries, adaptación móvil/tablet/escritorio, sombras, gradientes y efectos visuales. |
+| Semana 4 | Bootstrap 5.3 responsive | Navbar colapsable, carrusel automático, Grid System, seis Cards Bootstrap, formulario conservado y footer integrado con el estilo visual original.       |
 
 ## Evolución detallada
 
@@ -82,14 +82,14 @@ Archivos de la entrega:
 
 ## Tecnologías utilizadas
 
-| Tecnología | Aplicación en el proyecto |
-| --- | --- |
-| HTML5 | Estructura semántica y accesibilidad básica |
-| CSS3 | Variables, Grid, Flexbox, responsive, gradientes y glassmorphism |
+| Tecnología      | Aplicación en el proyecto                                        |
+| --------------- | ---------------------------------------------------------------- |
+| HTML5           | Estructura semántica y accesibilidad básica                      |
+| CSS3            | Variables, Grid, Flexbox, responsive, gradientes y glassmorphism |
 | Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y controles de formulario |
-| JavaScript ES6+ | Inicialización del carrusel y eventos Bootstrap |
-| Unsplash | Imágenes públicas del catálogo y carrusel |
-| GitHub Pages | Publicación del sitio estático |
+| JavaScript ES6+ | Inicialización del carrusel y eventos Bootstrap                  |
+| Unsplash        | Imágenes públicas del catálogo y carrusel                        |
+| GitHub Pages    | Publicación del sitio estático                                   |
 
 ## Estructura del repositorio
 
