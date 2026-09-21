@@ -60,7 +60,7 @@ Las imágenes de productos se cargan desde Unsplash, por lo que se necesita cone
 
 ## Evidencias del avance responsive
 
-### Escritorio - 1200 px o más
+### Escritorio 
 
 El catálogo utiliza una cuadrícula de tres columnas y la navegación se mantiene horizontal.
 
@@ -68,7 +68,7 @@ El catálogo utiliza una cuadrícula de tres columnas y la navegación se mantie
 
 ![Vista de escritorio 2](img/pc02.png)
 
-### Tablet - 768 px aproximadamente
+### Tablet  
 
 La cuadrícula se adapta a dos columnas y conserva el espaciado entre productos.
 
@@ -78,7 +78,7 @@ La cuadrícula se adapta a dos columnas y conserva el espaciado entre productos.
 
 ![Vista de tablet 3](img/tablet03.png)
 
-### Móvil - 375 px a 600 px
+### Móvil
 
 El catálogo se reorganiza en una columna, la navegación se apila y el formulario se adapta al ancho disponible.
 
@@ -88,6 +88,4 @@ El catálogo se reorganiza en una columna, la navegación se apila y el formular
 
 ![Vista móvil 3](img/movil03.jpeg)
 
-## Siguiente evolución
 
-La Semana 4 toma esta base visual y la adapta a Bootstrap 5.3 incorporando Navbar colapsable, Carousel, Grid System y Cards. La documentación de esa entrega se encuentra en [sem04/README.md](../sem04/README.md).
