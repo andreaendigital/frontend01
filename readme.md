@@ -10,7 +10,8 @@ Proyecto desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)** de 
 | Semana 2 | CSS3 y formularios       | Hoja de estilos externa, variables CSS, layout con Grid y Flexbox, tarjetas de productos, etiquetas visuales y formulario de contacto accesible.         |
 | Semana 3 | Diseño responsive        | Catálogo ampliado a seis productos, mejoras de accesibilidad, media queries, adaptación móvil/tablet/escritorio, sombras, gradientes y efectos visuales. |
 | Semana 4 | Bootstrap 5.3 responsive | Navbar colapsable, carrusel automático, Grid System, seis Cards Bootstrap, formulario conservado y footer integrado con el estilo visual original.       |
-| Semana 5 | JavaScript y Fetch API   | Manipulación dinámica del DOM, eventos interactivos, validación de formulario y carga de seis productos desde un archivo JSON local.                   |
+| Semana 5 | JavaScript y Fetch API   | Manipulación dinámica del DOM, eventos interactivos, validación de formulario y carga de seis productos desde un archivo JSON local.                     |
+| Semana 6 | Carrito y búsqueda       | Carrito dinámico, contador de unidades, total acumulado, búsqueda por submit, eliminación de productos y estructura reorganizada en `assets/`.           |
 
 ## Evolución detallada
 
@@ -104,17 +105,42 @@ Archivos de la entrega:
 - [sem05/js/main.js](sem05/js/main.js)
 - [sem05/data/products.json](sem05/data/products.json)
 
+### Semana 6 - Carrito, búsqueda y catálogo interactivo
+
+La sexta semana extiende el catálogo de Semana 5 con una experiencia de compra básica y una estructura de recursos más ordenada:
+
+- Reorganización de archivos dentro de `assets/css/`, `assets/js/`, `assets/data/` y `assets/img/`.
+- Navbar responsive con las categorías Inicio, Productos, Carrito y Contacto.
+- Formulario de búsqueda gestionado mediante `submit` y `preventDefault()`.
+- Filtrado de productos por nombre y descripción sin recargar la página.
+- Estado del carrito en memoria mediante el array `cart`.
+- Evento `click` para agregar productos al carrito.
+- Contador dinámico de unidades agregadas.
+- Lista de productos con botones `Quitar` generados dinámicamente.
+- Total acumulado calculado con `reduce()` y precios del JSON.
+- Eliminación y decremento de unidades mediante `splice()` y actualización de `renderCart()`.
+- Manejo de errores de Fetch con mensaje visible para el usuario.
+- Evidencias de búsqueda y carrito en PC y móvil dentro de `assets/img/`.
+
+Archivos de la entrega:
+
+- [sem06/README.md](sem06/README.md)
+- [sem06/index.html](sem06/index.html)
+- [sem06/assets/css/styles.css](sem06/assets/css/styles.css)
+- [sem06/assets/js/main.js](sem06/assets/js/main.js)
+- [sem06/assets/data/products.json](sem06/assets/data/products.json)
+
 ## Tecnologías utilizadas
 
-| Tecnología      | Aplicación en el proyecto                                        |
-| --------------- | ---------------------------------------------------------------- |
-| HTML5           | Estructura semántica y accesibilidad básica                      |
-| CSS3            | Variables, Grid, Flexbox, responsive, gradientes y glassmorphism |
-| Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y controles de formulario |
+| Tecnología      | Aplicación en el proyecto                                           |
+| --------------- | ------------------------------------------------------------------- |
+| HTML5           | Estructura semántica y accesibilidad básica                         |
+| CSS3            | Variables, Grid, Flexbox, responsive, gradientes y glassmorphism    |
+| Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y controles de formulario    |
 | JavaScript ES6+ | DOM, eventos, validaciones, Fetch API e inicialización del carrusel |
-| JSON            | Fuente local de datos para el catálogo de Semana 5                |
-| Unsplash        | Imágenes públicas del catálogo y carrusel                        |
-| GitHub Pages    | Publicación del sitio estático                                   |
+| JSON            | Fuente local de datos para los catálogos de Semana 5 y Semana 6     |
+| Unsplash        | Imágenes públicas del catálogo y carrusel                           |
+| GitHub Pages    | Publicación del sitio estático                                      |
 
 ## Estructura del repositorio
 
@@ -142,7 +168,14 @@ tareas/
 │   ├── css/styles.css
 │   ├── js/main.js
 │   └── data/products.json
-└── sem06/
+├── sem06/
+│   ├── README.md
+│   ├── index.html
+│   └── assets/
+│       ├── css/styles.css
+│       ├── data/products.json
+│       ├── img/
+│       └── js/main.js
 ```
 
 ## Visualización local
@@ -171,6 +204,7 @@ La entrega de Semana 4 carga Bootstrap e imágenes desde CDN, por lo que necesit
 - [Semana 3](sem03/index.html)
 - [Semana 4](sem04/index.html)
 - [Semana 5](sem05/index.html)
+- [Semana 6](sem06/index.html)
 
 ## Deploy por semana
 
@@ -179,6 +213,7 @@ La entrega de Semana 4 carga Bootstrap e imágenes desde CDN, por lo que necesit
 - [Deploy Semana 3](https://andreaendigital.github.io/frontend01/sem03/index.html)
 - [Deploy Semana 4](https://andreaendigital.github.io/frontend01/sem04/index.html)
 - [Deploy Semana 5](https://andreaendigital.github.io/frontend01/sem05/index.html)
+- [Deploy Semana 6](https://andreaendigital.github.io/frontend01/sem06/index.html)
 
 ## Evidencias por semana
 
@@ -189,3 +224,4 @@ Las evidencias responsive y capturas de cada avance se encuentran en el README c
 - [Evidencias Semana 3](sem03/README.md)
 - [Evidencias Semana 4](sem04/README.md)
 - [Evidencias Semana 5](sem05/README.md)
+- [Evidencias Semana 6](sem06/README.md)
