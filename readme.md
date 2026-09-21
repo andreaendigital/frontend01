@@ -10,6 +10,7 @@ Proyecto desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)** de 
 | Semana 2 | CSS3 y formularios       | Hoja de estilos externa, variables CSS, layout con Grid y Flexbox, tarjetas de productos, etiquetas visuales y formulario de contacto accesible.         |
 | Semana 3 | Diseño responsive        | Catálogo ampliado a seis productos, mejoras de accesibilidad, media queries, adaptación móvil/tablet/escritorio, sombras, gradientes y efectos visuales. |
 | Semana 4 | Bootstrap 5.3 responsive | Navbar colapsable, carrusel automático, Grid System, seis Cards Bootstrap, formulario conservado y footer integrado con el estilo visual original.       |
+| Semana 5 | JavaScript y Fetch API   | Manipulación dinámica del DOM, eventos interactivos, validación de formulario y carga de seis productos desde un archivo JSON local.                   |
 
 ## Evolución detallada
 
@@ -80,6 +81,29 @@ Archivos de la entrega:
 - [sem04/css/styles.css](sem04/css/styles.css)
 - [sem04/js/main.js](sem04/js/main.js)
 
+### Semana 5 - JavaScript, DOM y consumo asíncrono
+
+La quinta semana agrega comportamiento dinámico sobre la base responsive de Bootstrap:
+
+- Selección de elementos del DOM con `querySelector` y `querySelectorAll`.
+- Creación de cards y mensajes mediante `document.createElement()`.
+- Inserción y reemplazo de contenido con `appendChild()` y `replaceChildren()`.
+- Evento `click` para mostrar u ocultar una recomendación dinámica.
+- Eventos `mouseover` y `mouseout` para modificar visualmente las tarjetas.
+- Evento `submit` con `preventDefault()` y validación de nombre, correo y mensaje.
+- Consumo asíncrono del catálogo mediante `fetch()` y `async/await`.
+- Estados visibles de carga, éxito y error en la interfaz.
+- Catálogo de seis productos almacenado en `data/products.json`.
+- Tres tarjetas iniciales en HTML como contenido de respaldo; al cargar el JSON se reemplazan por las seis tarjetas dinámicas.
+
+Archivos de la entrega:
+
+- [sem05/README.md](sem05/README.md)
+- [sem05/index.html](sem05/index.html)
+- [sem05/css/styles.css](sem05/css/styles.css)
+- [sem05/js/main.js](sem05/js/main.js)
+- [sem05/data/products.json](sem05/data/products.json)
+
 ## Tecnologías utilizadas
 
 | Tecnología      | Aplicación en el proyecto                                        |
@@ -87,7 +111,8 @@ Archivos de la entrega:
 | HTML5           | Estructura semántica y accesibilidad básica                      |
 | CSS3            | Variables, Grid, Flexbox, responsive, gradientes y glassmorphism |
 | Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y controles de formulario |
-| JavaScript ES6+ | Inicialización del carrusel y eventos Bootstrap                  |
+| JavaScript ES6+ | DOM, eventos, validaciones, Fetch API e inicialización del carrusel |
+| JSON            | Fuente local de datos para el catálogo de Semana 5                |
 | Unsplash        | Imágenes públicas del catálogo y carrusel                        |
 | GitHub Pages    | Publicación del sitio estático                                   |
 
@@ -112,6 +137,11 @@ tareas/
 │   ├── js/main.js
 │   └── img/
 ├── sem05/
+│   ├── README.md
+│   ├── index.html
+│   ├── css/styles.css
+│   ├── js/main.js
+│   └── data/products.json
 └── sem06/
 ```
 
@@ -140,6 +170,7 @@ La entrega de Semana 4 carga Bootstrap e imágenes desde CDN, por lo que necesit
 - [Semana 2](sem02/index.html)
 - [Semana 3](sem03/index.html)
 - [Semana 4](sem04/index.html)
+- [Semana 5](sem05/index.html)
 
 ## Deploy por semana
 
@@ -147,6 +178,7 @@ La entrega de Semana 4 carga Bootstrap e imágenes desde CDN, por lo que necesit
 - [Deploy Semana 2](https://andreaendigital.github.io/frontend01/sem02/index.html)
 - [Deploy Semana 3](https://andreaendigital.github.io/frontend01/sem03/index.html)
 - [Deploy Semana 4](https://andreaendigital.github.io/frontend01/sem04/index.html)
+- [Deploy Semana 5](https://andreaendigital.github.io/frontend01/sem05/index.html)
 
 ## Evidencias por semana
 
@@ -156,3 +188,4 @@ Las evidencias responsive y capturas de cada avance se encuentran en el README c
 - [Evidencias Semana 2](sem02/README.md)
 - [Evidencias Semana 3](sem03/README.md)
 - [Evidencias Semana 4](sem04/README.md)
+- [Evidencias Semana 5](sem05/README.md)
