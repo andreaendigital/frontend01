@@ -61,13 +61,13 @@ El carrito se actualiza mediante eventos y manipulación del DOM:
 
 La implementación utiliza nombres semánticos equivalentes a los ejemplos de la pauta:
 
-| Pauta | Implementación |
-| --- | --- |
-| `carrito` | `cart` |
+| Pauta                        | Implementación |
+| ---------------------------- | -------------- |
+| `carrito`                    | `cart`         |
 | `actualizarResumenCarrito()` | `renderCart()` |
-| `lista-carrito` | `cartItems` |
-| `total-compra` | `cartTotal` |
-| `contador-productos` | `cartCount` |
+| `lista-carrito`              | `cartItems`    |
+| `total-compra`               | `cartTotal`    |
+| `contador-productos`         | `cartCount`    |
 
 En lugar de `innerHTML = ""`, se utiliza `replaceChildren()` para limpiar el contenedor antes de renderizar. El resultado funcional es el mismo y evita interpretar HTML innecesario.
 
@@ -104,6 +104,12 @@ La captura muestra la búsqueda de **mouse**, el resultado filtrado y el mensaje
 ![Carrito dinámico en PC](assets/img/sem06pc02carritoadd.png)
 
 La captura muestra productos agregados, contador, botones **Quitar** y el total acumulado actualizado.
+
+### Contador de productos en el carrito
+
+![Contador de productos agregados varias veces](assets/img/sem06pc03contador.png)
+
+Esta evidencia muestra el mismo producto agregado varias veces. El contador aumenta según la cantidad de unidades y el total acumulado se recalcula dinámicamente.
 
 ### Búsqueda responsive en móvil
 
