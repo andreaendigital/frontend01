@@ -141,28 +141,18 @@ La entrega de Semana 4 carga Bootstrap e imágenes desde CDN, por lo que necesit
 - [Semana 3](sem03/index.html)
 - [Semana 4](sem04/index.html)
 
-## Evidencias responsive
+## Deploy por semana
 
-Las capturas disponibles del proceso se encuentran en `sem03/img/`:
+- [Deploy Semana 1](https://andreaendigital.github.io/frontend01/sem01/index.html)
+- [Deploy Semana 2](https://andreaendigital.github.io/frontend01/sem02/index.html)
+- [Deploy Semana 3](https://andreaendigital.github.io/frontend01/sem03/index.html)
+- [Deploy Semana 4](https://andreaendigital.github.io/frontend01/sem04/index.html)
 
-### Escritorio
+## Evidencias por semana
 
-![Vista de escritorio 1](sem03/img/pc01.png)
+Las evidencias responsive y capturas de cada avance se encuentran en el README correspondiente a cada semana:
 
-![Vista de escritorio 2](sem03/img/pc02.png)
-
-### Tablet
-
-![Vista de tablet 1](sem03/img/tablet01.png)
-
-![Vista de tablet 2](sem03/img/tablet02.png)
-
-![Vista de tablet 3](sem03/img/tablet03.png)
-
-### Móvil
-
-![Vista móvil 1](sem03/img/movil01.jpeg)
-
-![Vista móvil 2](sem03/img/movil02.jpeg)
-
-![Vista móvil 3](sem03/img/movil03.jpeg)
+- [Evidencias Semana 1](sem01/README.md)
+- [Evidencias Semana 2](sem02/README.md)
+- [Evidencias Semana 3](sem03/README.md)
+- [Evidencias Semana 4](sem04/README.md)

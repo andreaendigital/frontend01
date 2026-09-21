@@ -102,28 +102,12 @@ sem04/
 
 Bootstrap y las imágenes se cargan desde CDN, por lo que se necesita conexión a Internet para visualizar todos los recursos externos.
 
-## Evidencias responsive
+## Evidencias responsive de Semana 4
 
-Las capturas de referencia se encuentran en la carpeta de evidencias de `sem03`:
+Las capturas específicas de la interfaz Bootstrap de Semana 4 todavía están pendientes de incorporarse. No se reutilizan las imágenes de `sem03`, porque corresponden al avance CSS3 de esa semana.
 
-### Escritorio
+Cuando se generen las nuevas evidencias, deben guardarse dentro de `sem04/img/` y organizarse en las vistas:
 
-![Vista de escritorio 1](../sem03/img/pc01.png)
-
-![Vista de escritorio 2](../sem03/img/pc02.png)
-
-### Tablet
-
-![Vista de tablet 1](../sem03/img/tablet01.png)
-
-![Vista de tablet 2](../sem03/img/tablet02.png)
-
-![Vista de tablet 3](../sem03/img/tablet03.png)
-
-### Móvil
-
-![Vista móvil 1](../sem03/img/movil01.jpeg)
-
-![Vista móvil 2](../sem03/img/movil02.jpeg)
-
-![Vista móvil 3](../sem03/img/movil03.jpeg)
+- Escritorio.
+- Tablet.
+- Móvil.
