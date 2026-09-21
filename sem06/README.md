@@ -89,6 +89,34 @@ Pruebas recomendadas:
 4. Pulsar **Quitar** y verificar que el resumen se actualiza.
 5. Simular un error cambiando temporalmente la ruta del JSON y comprobar el mensaje de error.
 
+## Evidencias de la implementación
+
+Las capturas de `assets/img/` muestran las funcionalidades de búsqueda y carrito en escritorio y móvil.
+
+### Búsqueda de productos en PC
+
+![Búsqueda de productos en PC](assets/img/sem06pc01busqueda.png)
+
+La captura muestra la búsqueda de **mouse**, el resultado filtrado y el mensaje de carga correcta del catálogo.
+
+### Carrito dinámico en PC
+
+![Carrito dinámico en PC](assets/img/sem06pc02carritoadd.png)
+
+La captura muestra productos agregados, contador, botones **Quitar** y el total acumulado actualizado.
+
+### Búsqueda responsive en móvil
+
+![Búsqueda de productos en móvil](assets/img/sem06movil01busqueda.png)
+
+La captura evidencia el formulario de búsqueda adaptado a una columna en pantalla móvil.
+
+### Carrito responsive en móvil
+
+![Carrito dinámico en móvil](assets/img/sem06movil02carritoadd.png)
+
+La captura evidencia el resumen del carrito en móvil con productos, cantidades, botones **Quitar** y total acumulado.
+
 ## Tecnologías
 
 | Tecnología      | Uso                                           |
