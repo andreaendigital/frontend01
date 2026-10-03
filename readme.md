@@ -12,6 +12,7 @@ Proyecto desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)** de 
 | Semana 4 | Bootstrap 5.3 responsive | Navbar colapsable, carrusel automático, Grid System, seis Cards Bootstrap, formulario conservado y footer integrado con el estilo visual original.       |
 | Semana 5 | JavaScript y Fetch API   | Manipulación dinámica del DOM, eventos interactivos, validación de formulario y carga de seis productos desde un archivo JSON local.                     |
 | Semana 6 | Carrito y búsqueda       | Carrito dinámico, contador de unidades, total acumulado, búsqueda por submit, eliminación de productos y estructura reorganizada en `assets/`.           |
+| Semana 7 | React y Vite             | Migración a una aplicación React con Vite, componentes reutilizables, hooks, renderizado condicional y carrito administrado mediante estado.             |
 
 ## Evolución detallada
 
@@ -130,6 +131,90 @@ Archivos de la entrega:
 - [sem06/assets/js/main.js](sem06/assets/js/main.js)
 - [sem06/assets/data/products.json](sem06/assets/data/products.json)
 
+### Semana 7 - Migración a React y Vite
+
+La séptima semana transforma Pixel Arcade desde una página con JavaScript imperativo hacia una aplicación React organizada con Vite. La apariencia visual se conserva con Bootstrap 5.3 y los estilos personalizados, mientras que la lógica se separa en componentes reutilizables.
+
+#### Cambios principales
+
+- Migración del punto de entrada a `src/main.jsx` y montaje de React en `#root`.
+- Configuración del proyecto mediante `package.json` y `vite.config.js`.
+- Separación de la interfaz en `App.jsx`, `ProductList.jsx`, `ShoppingCart.jsx`, `CartTotal.jsx`, `Counter.jsx` y `UserStatus.jsx`.
+- Uso de `useState` para el carrito, el contador y el texto de búsqueda.
+- Uso de `.map()` para renderizar las tarjetas y las entradas del carrito.
+- Uso de `.filter()` para buscar productos por nombre o descripción.
+- Uso de `.reduce()` para calcular el total acumulado.
+- Uso de `uniqueId` para agregar varias unidades como entradas independientes y eliminar solo la seleccionada.
+- Renderizado condicional para el carrito vacío, los resultados de búsqueda y el contador singular/plural.
+- Centralización de los recursos activos en `src/assets/`, evitando mantener una carpeta `assets` duplicada en la raíz de `sem07`.
+- Exclusión de `node_modules/`, `dist/` y archivos temporales mediante `.gitignore`.
+
+#### Estructura React
+
+```text
+sem07/
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── src/
+      ├── App.css
+      ├── App.jsx
+      ├── index.css
+      ├── main.jsx
+      ├── assets/
+      │   ├── products.js
+      │   └── styles.css
+      └── components/
+            ├── CartTotal.jsx
+            ├── Counter.jsx
+            ├── ProductList.jsx
+            ├── ShoppingCart.jsx
+            └── UserStatus.jsx
+```
+
+#### Renderizado condicional
+
+En `ProductList.jsx`, si la búsqueda no encuentra resultados se muestra un mensaje alternativo:
+
+```jsx
+if (filteredProducts.length === 0) {
+   return <p className="text-warning">No encontramos productos con esa búsqueda.</p>;
+}
+```
+
+En `ShoppingCart.jsx`, React decide si mostrar el mensaje de carrito vacío o las entradas agregadas:
+
+```jsx
+{cart.length === 0 ? (
+   <p>Tu carrito está vacío.</p>
+) : (
+   cart.map((product) => (
+      <div key={product.uniqueId}>{product.name}</div>
+   ))
+)}
+```
+
+#### Archivos de la entrega
+
+- [sem07/README.md](sem07/README.md)
+- [sem07/index.html](sem07/index.html)
+- [sem07/package.json](sem07/package.json)
+- [sem07/vite.config.js](sem07/vite.config.js)
+- [sem07/src/App.jsx](sem07/src/App.jsx)
+- [sem07/src/main.jsx](sem07/src/main.jsx)
+- [sem07/src/components](sem07/src/components)
+
+#### Ejecución local
+
+```bash
+cd sem07
+npm install
+npm run dev
+```
+
+Vite inicia normalmente la aplicación en `http://localhost:5173/`. Para comprobar la compilación de producción se utiliza `npm run build`.
+
 ## Tecnologías utilizadas
 
 | Tecnología      | Aplicación en el proyecto                                           |
@@ -137,8 +222,10 @@ Archivos de la entrega:
 | HTML5           | Estructura semántica y accesibilidad básica                         |
 | CSS3            | Variables, Grid, Flexbox, responsive, gradientes y glassmorphism    |
 | Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y controles de formulario    |
-| JavaScript ES6+ | DOM, eventos, validaciones, Fetch API e inicialización del carrusel |
-| JSON            | Fuente local de datos para los catálogos de Semana 5 y Semana 6     |
+| JavaScript ES6+ | DOM, eventos, validaciones, Fetch API y lógica de componentes        |
+| React           | Componentes, JSX, hooks, estado y renderizado condicional            |
+| Vite            | Servidor de desarrollo y compilación del proyecto de Semana 7       |
+| JSON/JS         | Fuente local de datos para los catálogos de Semana 5, 6 y 7         |
 | Unsplash        | Imágenes públicas del catálogo y carrusel                           |
 | GitHub Pages    | Publicación del sitio estático                                      |
 
@@ -176,6 +263,25 @@ tareas/
 │       ├── data/products.json
 │       ├── img/
 │       └── js/main.js
+├── sem07/
+│   ├── README.md
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   └── src/
+│       ├── App.jsx
+│       ├── main.jsx
+│       ├── App.css
+│       ├── index.css
+│       ├── assets/
+│       │   ├── products.js
+│       │   └── styles.css
+│       └── components/
+│           ├── CartTotal.jsx
+│           ├── Counter.jsx
+│           ├── ProductList.jsx
+│           ├── ShoppingCart.jsx
+│           └── UserStatus.jsx
 ```
 
 ## Visualización local
@@ -186,15 +292,21 @@ tareas/
    git clone https://github.com/andreaendigital/frontend01.git
    ```
 
-2. Entra a la carpeta de la semana que quieras revisar:
+2. Para revisar una semana HTML, entra a su carpeta y abre `index.html` con Live Server. Por ejemplo:
 
    ```bash
    cd frontend01/sem04
    ```
 
-3. Abre `index.html` directamente en el navegador o utiliza **Live Server** en Visual Studio Code.
+3. Para ejecutar la semana 7, utiliza Vite:
 
-La entrega de Semana 4 carga Bootstrap e imágenes desde CDN, por lo que necesita conexión a Internet para mostrar todos los recursos externos.
+   ```bash
+   cd frontend01/sem07
+   npm install
+   npm run dev
+   ```
+
+La entrega de Semana 7 se ejecuta mediante el servidor de desarrollo de Vite y necesita conexión a Internet para cargar Bootstrap e imágenes desde CDN.
 
 ## Enlaces
 
@@ -205,6 +317,7 @@ La entrega de Semana 4 carga Bootstrap e imágenes desde CDN, por lo que necesit
 - [Semana 4](sem04/index.html)
 - [Semana 5](sem05/index.html)
 - [Semana 6](sem06/index.html)
+- [Semana 7](sem07/README.md)
 
 ## Deploy por semana
 
@@ -214,6 +327,7 @@ La entrega de Semana 4 carga Bootstrap e imágenes desde CDN, por lo que necesit
 - [Deploy Semana 4](https://andreaendigital.github.io/frontend01/sem04/index.html)
 - [Deploy Semana 5](https://andreaendigital.github.io/frontend01/sem05/index.html)
 - [Deploy Semana 6](https://andreaendigital.github.io/frontend01/sem06/index.html)
+- Semana 7: ejecución local con Vite mediante `npm run dev`.
 
 ## Evidencias por semana
 
@@ -225,3 +339,4 @@ Las evidencias responsive y capturas de cada avance se encuentran en el README c
 - [Evidencias Semana 4](sem04/README.md)
 - [Evidencias Semana 5](sem05/README.md)
 - [Evidencias Semana 6](sem06/README.md)
+- [Evidencias Semana 7](sem07/README.md)
