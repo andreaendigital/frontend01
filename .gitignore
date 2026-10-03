@@ -1,0 +1,21 @@
+# Dependencias de Node/Vite
+node_modules/
+
+# Salidas de compilación
+dist/
+
+# Archivos temporales de Vite
+.vite/
+.vite-temp/
+
+# Archivos de entorno locales
+.env
+.env.*
+!.env.example
+
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
