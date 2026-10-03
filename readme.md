@@ -329,7 +329,7 @@ La entrega de Semana 7 se ejecuta mediante el servidor de desarrollo de Vite y n
 - [Deploy Semana 4](https://andreaendigital.github.io/frontend01/sem04/index.html)
 - [Deploy Semana 5](https://andreaendigital.github.io/frontend01/sem05/index.html)
 - [Deploy Semana 6](https://andreaendigital.github.io/frontend01/sem06/index.html)
-- Semana 7: ejecución local con Vite mediante `npm run dev`.
+- [Deploy Semana 7](https://andreaendigital.github.io/frontend01/sem07/)
 
 ## Evidencias por semana
 
