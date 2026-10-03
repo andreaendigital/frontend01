@@ -1,0 +1,65 @@
+name: Deploy Semana 7 a GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "sem07/**"
+      - ".github/workflows/deploy-sem07.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: sem07/package-lock.json
+
+      - name: Instalar dependencias
+        working-directory: sem07
+        run: npm install
+
+      - name: Compilar aplicación Vite
+        working-directory: sem07
+        run: npm run build
+
+      - name: Preparar artefacto de GitHub Pages
+        run: |
+          mkdir -p _site/sem07
+          cp -R sem07/dist/. _site/sem07/
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Subir artefacto de Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

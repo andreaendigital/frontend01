@@ -179,20 +179,22 @@ En `ProductList.jsx`, si la búsqueda no encuentra resultados se muestra un mens
 
 ```jsx
 if (filteredProducts.length === 0) {
-   return <p className="text-warning">No encontramos productos con esa búsqueda.</p>;
+  return (
+    <p className="text-warning">No encontramos productos con esa búsqueda.</p>
+  );
 }
 ```
 
 En `ShoppingCart.jsx`, React decide si mostrar el mensaje de carrito vacío o las entradas agregadas:
 
 ```jsx
-{cart.length === 0 ? (
-   <p>Tu carrito está vacío.</p>
-) : (
-   cart.map((product) => (
-      <div key={product.uniqueId}>{product.name}</div>
-   ))
-)}
+{
+  cart.length === 0 ? (
+    <p>Tu carrito está vacío.</p>
+  ) : (
+    cart.map((product) => <div key={product.uniqueId}>{product.name}</div>)
+  );
+}
 ```
 
 #### Archivos de la entrega
@@ -217,17 +219,17 @@ Vite inicia normalmente la aplicación en `http://localhost:5173/`. Para comprob
 
 ## Tecnologías utilizadas
 
-| Tecnología      | Aplicación en el proyecto                                           |
-| --------------- | ------------------------------------------------------------------- |
-| HTML5           | Estructura semántica y accesibilidad básica                         |
-| CSS3            | Variables, Grid, Flexbox, responsive, gradientes y glassmorphism    |
-| Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y controles de formulario    |
-| JavaScript ES6+ | DOM, eventos, validaciones, Fetch API y lógica de componentes        |
-| React           | Componentes, JSX, hooks, estado y renderizado condicional            |
-| Vite            | Servidor de desarrollo y compilación del proyecto de Semana 7       |
-| JSON/JS         | Fuente local de datos para los catálogos de Semana 5, 6 y 7         |
-| Unsplash        | Imágenes públicas del catálogo y carrusel                           |
-| GitHub Pages    | Publicación del sitio estático                                      |
+| Tecnología      | Aplicación en el proyecto                                        |
+| --------------- | ---------------------------------------------------------------- |
+| HTML5           | Estructura semántica y accesibilidad básica                      |
+| CSS3            | Variables, Grid, Flexbox, responsive, gradientes y glassmorphism |
+| Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y controles de formulario |
+| JavaScript ES6+ | DOM, eventos, validaciones, Fetch API y lógica de componentes    |
+| React           | Componentes, JSX, hooks, estado y renderizado condicional        |
+| Vite            | Servidor de desarrollo y compilación del proyecto de Semana 7    |
+| JSON/JS         | Fuente local de datos para los catálogos de Semana 5, 6 y 7      |
+| Unsplash        | Imágenes públicas del catálogo y carrusel                        |
+| GitHub Pages    | Publicación del sitio estático                                   |
 
 ## Estructura del repositorio
 
