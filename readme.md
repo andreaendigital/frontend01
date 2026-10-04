@@ -13,6 +13,7 @@ Proyecto desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)** de 
 | Semana 5 | JavaScript y Fetch API   | Manipulación dinámica del DOM, eventos interactivos, validación de formulario y carga de seis productos desde un archivo JSON local.                     |
 | Semana 6 | Carrito y búsqueda       | Carrito dinámico, contador de unidades, total acumulado, búsqueda por submit, eliminación de productos y estructura reorganizada en `assets/`.           |
 | Semana 7 | React y Vite             | Migración a una aplicación React con Vite, componentes reutilizables, hooks, renderizado condicional y carrito administrado mediante estado.             |
+| Semana 8 | Estados y efectos React  | Carga dinámica desde JSON, uso de `useState` y `useEffect`, estados de carga/error, carrito interactivo y botones con renderizado condicional.             |
 
 ## Evolución detallada
 
@@ -217,6 +218,79 @@ npm run dev
 
 Vite inicia normalmente la aplicación en `http://localhost:5173/`. Para comprobar la compilación de producción se utiliza `npm run build`.
 
+### Semana 8 - Estados, efectos y catálogo dinámico
+
+La semana 8 optimiza la aplicación React de la semana 7 mediante estados internos, efectos secundarios y renderizado condicional. Se conserva la gráfica de Pixel Arcade y se incorpora una carga simulada del catálogo desde `public/products.json`.
+
+#### Cambios principales
+
+- `useState` administra productos, carga, errores, búsqueda, carrito y contador.
+- `useEffect` carga el catálogo JSON al montar la aplicación.
+- `UserStatus` muestra los estados de carga, éxito o error.
+- `ProductList` filtra productos y cambia el texto del botón entre `Agregar al carrito` y `En el carrito`.
+- Todos los botones mantienen el estilo morado `btn-primary`.
+- `ShoppingCart` permite agregar y quitar productos individualmente.
+- `CartTotal` calcula el total con `reduce()`.
+- Se utiliza renderizado condicional para resultados vacíos y carrito sin productos.
+
+#### Estructura resumida
+
+```text
+sem08/
+├── README.md
+├── package.json
+├── vite.config.js
+├── public/products.json
+└── src/
+    ├── App.jsx
+    ├── main.jsx
+    └── components/
+        ├── CartTotal.jsx
+        ├── Counter.jsx
+        ├── ProductList.jsx
+        ├── ShoppingCart.jsx
+        └── UserStatus.jsx
+```
+
+#### Ejemplo de carga con `useEffect`
+
+```jsx
+useEffect(() => {
+  fetch(`${import.meta.env.BASE_URL}products.json`)
+    .then((response) => response.json())
+    .then((data) => setProducts(data))
+    .finally(() => setLoadingProducts(false));
+}, []);
+```
+
+#### Ejemplo de botón condicional
+
+```jsx
+<button className="btn btn-primary mt-auto">
+  {cart.some((item) => item.id === product.id)
+    ? "En el carrito"
+    : "Agregar al carrito"}
+</button>
+```
+
+#### Archivos de la entrega
+
+- [sem08/README.md](sem08/README.md)
+- [sem08/package.json](sem08/package.json)
+- [sem08/vite.config.js](sem08/vite.config.js)
+- [sem08/src/App.jsx](sem08/src/App.jsx)
+- [sem08/src/components](sem08/src/components)
+
+#### Ejecución local
+
+```bash
+cd sem08
+npm install
+npm run dev -- --host 127.0.0.1 --port 5174
+```
+
+La aplicación fue verificada localmente en [http://127.0.0.1:5174/frontend01/sem08/](http://127.0.0.1:5174/frontend01/sem08/).
+
 ## Tecnologías utilizadas
 
 | Tecnología      | Aplicación en el proyecto                                        |
@@ -226,8 +300,9 @@ Vite inicia normalmente la aplicación en `http://localhost:5173/`. Para comprob
 | Bootstrap 5.3.3 | Navbar, Carousel, Grid, Cards, botones y controles de formulario |
 | JavaScript ES6+ | DOM, eventos, validaciones, Fetch API y lógica de componentes    |
 | React           | Componentes, JSX, hooks, estado y renderizado condicional        |
-| Vite            | Servidor de desarrollo y compilación del proyecto de Semana 7    |
-| JSON/JS         | Fuente local de datos para los catálogos de Semana 5, 6 y 7      |
+| Vite            | Servidor de desarrollo y compilación de los proyectos React      |
+| React Hooks     | `useState` y `useEffect` para estados y efectos de Semana 8       |
+| JSON/JS         | Fuente local de datos para los catálogos de Semana 5, 6, 7 y 8 |
 | Unsplash        | Imágenes públicas del catálogo y carrusel                        |
 | GitHub Pages    | Publicación del sitio estático                                   |
 
@@ -284,6 +359,21 @@ tareas/
 │           ├── ProductList.jsx
 │           ├── ShoppingCart.jsx
 │           └── UserStatus.jsx
+├── sem08/
+│   ├── README.md
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── public/products.json
+│   └── src/
+│       ├── App.jsx
+│       ├── main.jsx
+│       └── components/
+│           ├── CartTotal.jsx
+│           ├── Counter.jsx
+│           ├── ProductList.jsx
+│           ├── ShoppingCart.jsx
+│           └── UserStatus.jsx
 ```
 
 ## Visualización local
@@ -308,7 +398,15 @@ tareas/
    npm run dev
    ```
 
-La entrega de Semana 7 se ejecuta mediante el servidor de desarrollo de Vite y necesita conexión a Internet para cargar Bootstrap e imágenes desde CDN.
+4. Para ejecutar la semana 8, utiliza Vite en el puerto configurado:
+
+  ```bash
+  cd frontend01/sem08
+  npm install
+  npm run dev -- --host 127.0.0.1 --port 5174
+  ```
+
+Las semanas 7 y 8 se ejecutan mediante Vite y necesitan conexión a Internet para cargar Bootstrap e imágenes desde CDN.
 
 ## Enlaces
 
@@ -320,6 +418,7 @@ La entrega de Semana 7 se ejecuta mediante el servidor de desarrollo de Vite y n
 - [Semana 5](sem05/index.html)
 - [Semana 6](sem06/index.html)
 - [Semana 7](sem07/README.md)
+- [Semana 8](sem08/README.md)
 
 ## Deploy por semana
 
@@ -330,6 +429,7 @@ La entrega de Semana 7 se ejecuta mediante el servidor de desarrollo de Vite y n
 - [Deploy Semana 5](https://andreaendigital.github.io/frontend01/sem05/index.html)
 - [Deploy Semana 6](https://andreaendigital.github.io/frontend01/sem06/index.html)
 - [Deploy Semana 7](https://andreaendigital.github.io/frontend01/sem07/)
+- Semana 8: verificación local en [http://127.0.0.1:5174/frontend01/sem08/](http://127.0.0.1:5174/frontend01/sem08/).
 
 ## Evidencias por semana
 
@@ -342,3 +442,4 @@ Las evidencias responsive y capturas de cada avance se encuentran en el README c
 - [Evidencias Semana 5](sem05/README.md)
 - [Evidencias Semana 6](sem06/README.md)
 - [Evidencias Semana 7](sem07/README.md)
+- [Evidencias Semana 8](sem08/README.md)
