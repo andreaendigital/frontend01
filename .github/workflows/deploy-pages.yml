@@ -1,12 +1,19 @@
-name: Deploy Semana 7 a GitHub Pages
+name: Deploy todas las semanas a GitHub Pages
 
 on:
   push:
     branches:
       - main
     paths:
+      - "sem01/**"
+      - "sem02/**"
+      - "sem03/**"
+      - "sem04/**"
+      - "sem05/**"
+      - "sem06/**"
       - "sem07/**"
-      - ".github/workflows/deploy-sem07.yml"
+      - "sem08/**"
+      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -29,26 +36,41 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: sem07/package-lock.json
 
-      - name: Instalar dependencias
+      - name: Instalar dependencias de sem07
         working-directory: sem07
         run: npm install
 
-      - name: Compilar aplicación Vite
+      - name: Compilar sem07
         working-directory: sem07
         run: npm run build
 
-      - name: Preparar artefacto de GitHub Pages
+      - name: Instalar dependencias de sem08
+        working-directory: sem08
+        run: npm install
+
+      - name: Compilar sem08
+        working-directory: sem08
+        run: npm run build
+
+      - name: Preparar sitio completo
         run: |
-          mkdir -p _site/sem07
+          mkdir -p _site
+
+          # Las semanas 1 a 6 son sitios estáticos.
+          for week in sem01 sem02 sem03 sem04 sem05 sem06; do
+            cp -R "$week" _site/
+          done
+
+          # Las semanas React se publican desde sus builds de Vite.
+          mkdir -p _site/sem07 _site/sem08
           cp -R sem07/dist/. _site/sem07/
+          cp -R sem08/dist/. _site/sem08/
 
       - name: Configurar Pages
         uses: actions/configure-pages@v5
 
-      - name: Subir artefacto de Pages
+      - name: Subir artefacto completo de Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site

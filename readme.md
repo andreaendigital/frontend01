@@ -13,7 +13,7 @@ Proyecto desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)** de 
 | Semana 5 | JavaScript y Fetch API   | Manipulación dinámica del DOM, eventos interactivos, validación de formulario y carga de seis productos desde un archivo JSON local.                     |
 | Semana 6 | Carrito y búsqueda       | Carrito dinámico, contador de unidades, total acumulado, búsqueda por submit, eliminación de productos y estructura reorganizada en `assets/`.           |
 | Semana 7 | React y Vite             | Migración a una aplicación React con Vite, componentes reutilizables, hooks, renderizado condicional y carrito administrado mediante estado.             |
-| Semana 8 | Estados y efectos React  | Carga dinámica desde JSON, uso de `useState` y `useEffect`, estados de carga/error, carrito interactivo y botones con renderizado condicional.             |
+| Semana 8 | Estados y efectos React  | Carga dinámica desde JSON, uso de `useState` y `useEffect`, estados de carga/error, carrito interactivo y botones con renderizado condicional.           |
 
 ## Evolución detallada
 
@@ -301,8 +301,8 @@ La aplicación fue verificada localmente en [http://127.0.0.1:5174/frontend01/se
 | JavaScript ES6+ | DOM, eventos, validaciones, Fetch API y lógica de componentes    |
 | React           | Componentes, JSX, hooks, estado y renderizado condicional        |
 | Vite            | Servidor de desarrollo y compilación de los proyectos React      |
-| React Hooks     | `useState` y `useEffect` para estados y efectos de Semana 8       |
-| JSON/JS         | Fuente local de datos para los catálogos de Semana 5, 6, 7 y 8 |
+| React Hooks     | `useState` y `useEffect` para estados y efectos de Semana 8      |
+| JSON/JS         | Fuente local de datos para los catálogos de Semana 5, 6, 7 y 8   |
 | Unsplash        | Imágenes públicas del catálogo y carrusel                        |
 | GitHub Pages    | Publicación del sitio estático                                   |
 
@@ -400,11 +400,11 @@ tareas/
 
 4. Para ejecutar la semana 8, utiliza Vite en el puerto configurado:
 
-  ```bash
-  cd frontend01/sem08
-  npm install
-  npm run dev -- --host 127.0.0.1 --port 5174
-  ```
+```bash
+cd frontend01/sem08
+npm install
+npm run dev -- --host 127.0.0.1 --port 5174
+```
 
 Las semanas 7 y 8 se ejecutan mediante Vite y necesitan conexión a Internet para cargar Bootstrap e imágenes desde CDN.
 
