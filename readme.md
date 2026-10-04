@@ -429,7 +429,7 @@ Las semanas 7 y 8 se ejecutan mediante Vite y necesitan conexión a Internet par
 - [Deploy Semana 5](https://andreaendigital.github.io/frontend01/sem05/index.html)
 - [Deploy Semana 6](https://andreaendigital.github.io/frontend01/sem06/index.html)
 - [Deploy Semana 7](https://andreaendigital.github.io/frontend01/sem07/)
-- Semana 8: verificación local en [http://127.0.0.1:5174/frontend01/sem08/](http://127.0.0.1:5174/frontend01/sem08/).
+- [Deploy Semana 8](https://andreaendigital.github.io/frontend01/sem08/)
 
 ## Evidencias por semana
 
