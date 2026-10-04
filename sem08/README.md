@@ -34,7 +34,11 @@ sem08/
     ├── index.css
     ├── main.jsx
     ├── assets/
-    │   └── styles.css
+    │   ├── styles.css
+    │   └── img/
+    │       ├── busqueda.png
+    │       ├── carritovacio.png
+    │       └── enelcarrito.png
     └── components/
         ├── CartTotal.jsx
         ├── Counter.jsx
@@ -216,45 +220,55 @@ const total = cart.reduce((sum, product) => sum + product.offerPrice, 0);
 
 ## Ejecutar el proyecto
 
-Desde la carpeta del proyecto:
+Los comandos deben ejecutarse desde la carpeta `sem08`, donde se encuentra `package.json`:
 
 ```bash
 cd sem08
 npm install
-npm run dev
-```
-
-Como la configuración utiliza la base de GitHub Pages, Vite mostrará una dirección similar a:
-
-```text
-http://localhost:5173/frontend01/sem08/
-```
-
-También puede ejecutarse en otro puerto:
-
-```bash
 npm run dev -- --host 127.0.0.1 --port 5174
 ```
 
-Para comprobar la compilación de producción:
+Con esta configuración, la aplicación se abre en:
+
+```text
+http://127.0.0.1:5174/frontend01/sem08/
+```
+
+Si el puerto `5174` está ocupado, Vite puede iniciar en otro puerto. En ese caso se debe abrir la URL que aparece en la terminal, conservando la ruta `/frontend01/sem08/`.
+
+Para crear la compilación de producción:
 
 ```bash
 npm run build
 ```
 
-## Resultado esperado
+Para previsualizar la compilación:
 
-Al abrir la aplicación se espera poder:
+```bash
+npm run preview
+```
 
-1. Ver el mensaje `Cargando productos...` mientras se solicita el JSON.
-2. Ver los seis productos cuando finaliza correctamente la carga.
-3. Buscar productos por nombre o descripción.
-4. Agregar productos al carrito.
-5. Ver que el botón correspondiente cambia a `En el carrito`.
-6. Mantener todos los botones en color morado.
-7. Ver el contador y el total actualizado.
-8. Eliminar productos individualmente.
-9. Ver el mensaje `Tu carrito está vacío` cuando se eliminan todos los productos.
+## Evidencias de funcionamiento
+
+Las siguientes capturas muestran las funcionalidades implementadas durante la semana 8.
+
+### Búsqueda de productos
+
+![Búsqueda de productos por nombre o descripción](src/assets/img/busqueda.png)
+
+La captura muestra la búsqueda del término `consola`. El catálogo filtra los productos y presenta únicamente `Consola Retro Classic`, manteniendo sus precios y el botón morado `Agregar al carrito`.
+
+### Producto agregado al carrito
+
+![Botón En el carrito](src/assets/img/enelcarrito.png)
+
+La captura muestra productos en el catálogo después de una interacción. El botón del `Setup Battlestation Complete` cambió de `Agregar al carrito` a `En el carrito`, mientras el botón del mouse aún permanece disponible. Ambos conservan el estilo morado `btn-primary`.
+
+### Carrito vacío
+
+![Carrito vacío](src/assets/img/carritovacio.png)
+
+La captura muestra el renderizado condicional del carrito vacío: aparece el mensaje `Tu carrito está vacío`, el contador indica `0 productos` y el total acumulado muestra `$0`.
 
 ## Tecnologías
 
